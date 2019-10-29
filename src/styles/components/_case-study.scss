@@ -1,0 +1,96 @@
+body[data-page='page2']{
+   background-color: #f8f8f8;
+
+   .header{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .section{
+
+
+      @include small{
+         width: 500px;
+         margin: 0 auto;
+
+         padding: 58px;
+         background-color: #fff;
+
+         &:first-child{
+            margin-top: -58px;
+            padding-top: 72px;
+         }
+      }
+
+      @include meduim{
+         width: 700px;
+         padding:58px 100px;
+
+         &:first-child{
+            padding-top: 116px;
+         }
+      }
+   }
+
+   .title--header{
+      font-size: 18px;
+      color: #fff;
+      font-weight: 300;
+   }
+
+   p{
+      margin-bottom: 20px;
+   }
+
+   .p--margin{
+      margin: 0;
+   }
+
+   .title{
+      margin-bottom: 20px; 
+
+      &--small{
+         margin: 0;
+      }
+
+      &--meduim{
+         font-size: 18px;
+         margin: 0;
+      }
+   }
+
+   .logo{
+      position: relative;
+      top: 0;
+      left: 0;
+
+      overflow: hidden;
+      text-indent: inherit;
+
+      background: none;
+
+      width: 150px;
+      height: fit-content;
+
+      line-height: .8;
+
+      margin-bottom: 28px;
+
+      &__img{
+         width: 300px;
+      }
+   }
+
+   .outils{
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #ccc;
+   }
+
+   .list{
+      list-style: disc;
+      margin-bottom: 28px;
+   }
+}

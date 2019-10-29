@@ -1,0 +1,235 @@
+body {
+   margin: 0;
+   width: 100%;
+   height: 100vh;
+ 
+   font-family: 'Rubik', sans-serif;
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 1.6;
+   color: $c-black;
+
+   position: relative;
+ }
+
+ /* Reset */
+ul{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+a{
+   color: inherit;
+   text-decoration: inherit;
+}
+
+p{
+   margin: 0;
+}
+
+.p--meduim{
+   font-size: 36px;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 700;
+   line-height: 1.3;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+
+   &::selection{
+      background-color: $c-or;
+      color: #000;
+   }
+}
+
+.p--margin{
+   margin: 20px 0;
+}
+
+.p--small{
+   font-size: 34px;
+
+   @include verySmall{
+      font-size: 28px;
+   }
+}
+
+.title{
+   margin: 0;
+
+   font-weight: 700;
+   line-height: 1.3;
+   font-size: 36px;
+
+   letter-spacing: 2px;
+   text-transform: uppercase;
+
+   color: $c-title;
+
+   &::selection{
+      background-color: $c-or;
+      color: #000;
+   }
+
+   &--small{
+      font-size: 18px;
+      color: $c-or;
+   }
+
+   &--margin{
+      margin-bottom: 28px;
+      margin-top: 70px;
+
+      @include small{
+         margin-top: 88px;
+      }
+   }
+
+   &--light{
+      color: #fff;
+      margin-bottom: 28px;
+   }
+}
+
+.link{
+   color: #fff;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 700;
+   font-size: 18px;
+
+   text-transform: uppercase;
+
+   background-color: $c-or;
+   border: 2px solid $c-or;
+   padding: 9px 28px;
+   border-radius: 36px;
+
+   display: inline-block;
+
+   margin-top: 28px;
+
+   transition: all .3s cubic-bezier(0.3,-0.11, 0.29, 0.26);
+
+   @include small{
+      &:hover{
+         box-shadow: 0 0 10px 2px rgba(0,0,0,.3);
+
+         transform: scale(1.1);
+      }
+   }
+}
+
+.btn{
+   color: #fff;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 700;
+   font-size: 18px;
+
+   text-transform: uppercase;
+
+   background-color: $c-or;
+   border: 2px solid $c-or;
+   padding: 9px 28px;
+   border-radius: 36px;
+
+   display: inline-block;
+   width: fit-content;
+
+   margin-top: 28px;
+
+   cursor: pointer;
+
+   outline: none;
+
+   &--light{
+      background-color: transparent;
+      border: 2px solid #fff;
+
+      font-size: 12px;
+      padding: 9px 20px;
+   }
+
+   transition: all .3s cubic-bezier(0.3,-0.11, 0.29, 0.26);
+   
+   @include small{
+      &:hover{
+         box-shadow: 0 0 10px 2px rgba(0,0,0,.3);
+
+         transform: scale(1.1);
+      }
+   }
+}
+
+.logo{
+   position: absolute;
+   top: 28px;
+   left: 28px;
+
+   overflow: hidden;
+   text-indent: 100%;
+
+   background-image: url(../assets/svg/logo.svg);
+   background-repeat: no-repeat;
+   background-size: 200%;
+
+   width: 100px;
+   height: 19px;
+
+   @include small{
+      top: 40px;
+      left: 40px;
+
+      &--apropos{
+         top: 58px;
+         left: 58px;
+      }
+   }
+}
+
+.section{
+   padding: 40px 28px;
+   box-sizing: border-box;
+
+   &--dark{
+      background-color: #000;
+      color: #fff;
+
+      position: relative;
+
+      &:before{
+         content:'';
+         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+         background-size: 100%;
+
+         position: absolute;
+         top: 0;
+         left: 0;
+         transform: translateY(-100%);
+         
+         width: 100%;
+         height: 350px;
+      }  
+   }
+}
+
+.center{
+   @include small{
+      text-align: center;
+      margin: 82px 0;
+   }
+
+   margin: 40px 0;
+}
+
+.blockC{
+   @include small{
+      padding: 82px 40px;
+      box-sizing: border-box;
+      width: 520px;
+      margin: 0 auto;
+   }
+   
+   @include meduim{
+      width: 100%;
+   }
+}
